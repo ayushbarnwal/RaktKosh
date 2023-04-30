@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="My Profile"
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/muser"/>
+    <item
+        android:title="Donated Request"
+        android:id="@+id/navigation_donation_request"
+        android:icon="@drawable/blood_pressure"/>
+    <item
+        android:title="Raised Request"
+        android:id="@+id/navigation_raised_request"
+        android:icon="@drawable/history"/>
+    <group android:id="@+id/vv"
+        android:menuCategory="alternative">
+
+        <item
+            android:id="@+id/about_us"
+            android:title="About Us"
+            android:icon="@drawable/blooddrop"/>
+
+        <item
+            android:title="Privacy Policy"
+            android:icon="@drawable/baseline_verified_user_24"/>
+
+        <item
+            android:title="Log Out"
+            android:icon="@drawable/baseline_logout_24"
+            android:id="@+id/navigation_logOut"/>
+
+    </group>
+
+
+</menu>

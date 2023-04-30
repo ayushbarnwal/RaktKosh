@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RequestExploreActivity"
+    android:background="@color/lightest_grey">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <TextView
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:text="Explore Request"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:id="@+id/isVerified"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Got Verified"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:trackTint="@drawable/newtrack"
+                    android:thumbTint="@drawable/newthumb"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar5"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="40dp"
+                    android:progressTint="@color/dark_red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.551" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:elevation="2dp"
+                android:padding="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardMaxElevation="4dp"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mtype_selected"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blood"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_gravity="center_horizontal"/>
+
+                            <TextView
+                                android:id="@+id/mblood_grp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:text="B+"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="20dp"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/white"
+                                android:background="@drawable/circular_background"
+                                android:textSize="18sp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/muser_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sweta Tiwari"
+                                android:textSize="17dp"
+                                android:textColor="@color/black"
+                                android:layout_marginTop="5dp"/>
+
+                            <TextView
+                                android:id="@+id/mblood_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/mint_green"
+                                android:textSize="12dp"
+                                android:text="2 Units"/>
+
+                            <TextView
+                                android:id="@+id/mhosital_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:text="Patel Hostel, MNNIT Allahabd,Prayagraj,UP(211004)"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:id="@+id/mpatient_situation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Critical"
+                                android:textSize="17dp"
+                                android:textColor="@color/dark_red"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mhas_Replacement"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Not Available"
+                                android:textSize="15dp"
+                                android:textColor="@color/dark_red"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Blood Replacement"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mhospital_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="AIIMS Hospital"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hospital Name"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mhospital_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="AIIMS Delhi, Delhi, UP"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hospital Address"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/sos1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="SOS"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/mark_as_emergency"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Mark As Emergency"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@color/lightest_grey"
+                            android:textSize="15dp"
+                            android:padding="5dp"/>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mcontact_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="+91-7374089986"
+                                android:textColor="@color/mint_green"
+                                android:textSize="15dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Contact Person Number"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mstatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Closed"
+                                android:textSize="15dp"
+                                android:textColor="@color/dark_red"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/exchange"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/got_verified"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No"
+                                android:textSize="15dp"
+                                android:textColor="@color/dark_red"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Verified By Admin"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/pdf2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/pdf"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Document"
+                            android:textSize="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/dark_red"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="3dp"/>
+
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/unit_fulfilled1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/mint_green"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="UNIT FULLFIELD"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/mint_green"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="VIEWS"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/mint_green"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="USER ACCEPTED"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/mint_green"
+                                android:textStyle="bold"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="NOTIFIED"
+                                android:textColor="@color/black"
+                                android:gravity="center_horizontal"
+                                android:layout_marginBottom="5dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:elevation="2dp"
+                android:padding="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardMaxElevation="4dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Donor"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:src="@drawable/search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Sorry! We couldn't find any donor for you"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                    app:layout_constraintVertical_bias="0.157" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

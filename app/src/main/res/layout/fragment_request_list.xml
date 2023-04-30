@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightest_grey"
+    tools:context=".Fragment.RequestListFragment">
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_hint="Search By Address..."
+        app:mt_maxSuggestionsCount="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar1"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="10dp"
+        app:mt_placeholder="Search By Address..."
+        android:elevation="5dp"
+        android:outlineProvider="bounds"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightest_grey"
+        android:id="@+id/request_list_recycler_view"/>
+
+
+</LinearLayout>

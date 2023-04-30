@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/request_list"
+        android:title="Request List"
+        android:icon="@drawable/baseline_list_24"/>
+
+    <item android:id="@+id/map_user_main"
+        android:title="Search"
+        android:icon="@drawable/locetion"/>
+
+    <item android:id="@+id/camp_list"
+        android:title="Blood Camp"
+        android:icon="@drawable/baseline_chat_24"/>
+
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_person_outline_24"/>
+
+
+</menu>

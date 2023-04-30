@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightest_grey"
+    tools:context=".BloodRequestActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:text="Request Blood"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:elevation="2dp"
+            android:padding="8dp"
+            app:cardCornerRadius="2dp"
+            app:cardMaxElevation="4dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kindly Fill below details accurately to help you better"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/light_grey"
+                    android:textColor="@color/black"
+                    android:padding="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_grp1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
+                        android:buttonTint="@color/dark_red"
+                        android:textColor="@color/black"
+                        android:text="Blood"/>
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:buttonTint="@color/dark_red"
+                        android:text="Platelets"/>
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:buttonTint="@color/dark_red"
+                        android:text="Plasma"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Replacement Available"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_grp2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:textColor="@color/black"
+                        android:buttonTint="@color/dark_red"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="5dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:buttonTint="@color/dark_red"
+                        android:text="No"/>
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blood Group"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="25dp"/>
+
+                    <Spinner
+                        android:id="@+id/blood_grp_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blood Unit Required"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <EditText
+                    android:id="@+id/blood_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Blood Units"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required Upto"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/required_upto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="16, March, 2023"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/dark_red"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:elevation="2dp"
+        android:padding="8dp"
+        app:cardCornerRadius="2dp"
+        app:cardMaxElevation="4dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your contact details are not going to be shared or transport outside the RaktKosh Platform"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/light_grey"
+            android:padding="4dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/r_user_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sunny"
+                    android:padding="5dp"
+                    android:textSize="17dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:background="@color/light_grey"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/r_user_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kumar"
+                    android:padding="5dp"
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:background="@color/light_grey"/>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Number"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="2dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91"
+                    android:layout_marginLeft="5dp"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/light_grey"/>
+
+                <TextView
+                    android:id="@+id/r_user_contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9793910499"
+                    android:background="@color/light_grey"
+                    android:textSize="17dp"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:elevation="2dp"
+        android:padding="8dp"
+        app:cardCornerRadius="2dp"
+        app:cardMaxElevation="4dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospital Name and Address will help Donor to navigate easily"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/light_grey"
+                android:padding="4dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NearBy Hospital Name"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/hospital_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hospital Name"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/upload_document"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Report"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/dark_red"/>
+
+                <ImageView
+                    android:id="@+id/pdf"
+                    android:src="@drawable/pdf"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By Submitting these details, you accept that this request should not be made for a Commercial Interest and you will allow this Terms and Condition of Privacy by Clicking this."
+        android:textColor="@color/black"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:elevation="2dp"
+        android:padding="8dp"
+        app:cardCornerRadius="2dp"
+        app:cardMaxElevation="4dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp">
+
+        <Button
+            android:id="@+id/blood_request_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Details"
+            android:background="@color/dark_red"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
+
+</ScrollView>

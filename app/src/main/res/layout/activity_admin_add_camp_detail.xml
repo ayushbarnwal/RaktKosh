@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AdminDonationCampActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Donation Camp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        android:padding="20dp"/>
+
+    <TextView
+        android:id="@+id/notify_blood_camp_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notify to All User"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/mint_green"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/dark_red"/>
+
+    <TextView
+        android:id="@+id/blood_camp_date_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="29 April 2023"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/mint_green"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Time"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/dark_red"/>
+
+            <TextView
+                android:id="@+id/blood_camp_start_time_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="29 April 2023"
+                android:textSize="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/mint_green"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="End Time"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/dark_red"/>
+
+            <TextView
+                android:id="@+id/blood_camp_end_time_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="29 April 2023"
+                android:textSize="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/mint_green"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camp Address"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/dark_red"/>
+
+            <TextView
+                android:id="@+id/blood_camp_address_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camp Address"
+                android:textSize="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Location"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/dark_red"/>
+
+        <ImageView
+            android:id="@+id/edit_camp_location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/locetion"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="end"
+            android:textColor="@color/mint_green"/>
+
+    </LinearLayout>
+
+</LinearLayout>
